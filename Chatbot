@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voiceglow HTML Sample</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        #VG_OVERLAY_CONTAINER {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="VG_OVERLAY_CONTAINER">
+        <!-- Aqui é onde o Voiceglow renderiza o widget. -->
+    </div>
+
+    <script>
+        (function() {
+            window.VG_CONFIG = {
+                ID: "0mcAM5onjlAp0Kw",
+                region: 'eu', // 'eu' ou 'na' correspondendo a Europa e América do Norte
+                render: 'full-width', // Força o widget a cobrir a tela inteira
+                stylesheets: [
+                    "https://storage.googleapis.com/voiceglow-cdn/vg_live_build/styles.css",
+                    // Adicione suas folhas de estilo CSS personalizadas aqui
+                ],
+            };
+            var VG_SCRIPT = document.createElement("script");
+            VG_SCRIPT.src = "https://storage.googleapis.com/voiceglow-cdn/vg_live_build/vg_bundle.js";
+            VG_SCRIPT.async = true;
+            document.body.appendChild(VG_SCRIPT);
+        })();
+    </script>
+</body>
+</html>
